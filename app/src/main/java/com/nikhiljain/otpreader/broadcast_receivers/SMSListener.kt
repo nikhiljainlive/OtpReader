@@ -44,6 +44,12 @@ class SMSListener : BroadcastReceiver() {
         )
     }
 
+    /**
+     * @purpose method to get SmsMessage from intent
+     * @param context Context
+     * @param intent Intent containing protocol data unit array
+     * @return SmsMessage (optional value)
+     */
     private fun getSmsMessageFromIntent(context: Context, intent: Intent): SmsMessage? {
         val data = intent.extras
         val protocolDataUnitArray: Array<Any>? =
@@ -59,6 +65,11 @@ class SMSListener : BroadcastReceiver() {
         return null
     }
 
+    /**
+     * @purpose method to get format based on the type of device
+     * @param context Context
+     * @return format of message
+     */
     private fun getFormatForDevice(context: Context): String? {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.P) return null
 
@@ -68,6 +79,12 @@ class SMSListener : BroadcastReceiver() {
         return if (PHONE_TYPE_CDMA == activePhone) FORMAT_3GPP2 else FORMAT_3GPP
     }
 
+    /**
+     * @purpose method to extract message from Protocol Data Unit
+     * @param unit protocol data unit
+     * @param format format of message
+     * @return SmsMessage
+     */
     private fun extractMessageFromPDU(unit: ByteArray, format: String?): SmsMessage {
         var formatOfMsg = format
 
