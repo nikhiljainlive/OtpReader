@@ -11,6 +11,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.nikhiljain.otpreader.broadcast_receivers.SMSListener
 import com.nikhiljain.otpreader.callback_interfaces.Common
+import com.nikhiljain.otpreader.util.Constants
 
 typealias Completion = (Boolean) -> Unit
 
