@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">OtpReader</string>
+    <string name="permission_string">We need permission in order to show the message received</string>
+    <string name="permission_req">Permission Required</string>
+    <string name="grant_option">Grant</string>
+    <string name="deny_option">Deny</string>
+    <string name="we_are_reading_a_message_as_you_receive_it">We are reading a message as you receive it.</string>
+    <string name="message">Message</string>
+    <string name="PDU_intent_key">pdus</string>
+</resources>
